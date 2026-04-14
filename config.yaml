@@ -1,0 +1,208 @@
+global:
+  lookback_days: 14
+  personal_channel: "C0ASVLY92UC"
+
+mcp:
+  atlassian_cloud_id: "axilis.atlassian.net"
+  notion_mcp_server: "plugin-Notion-notion"
+  atlassian_mcp_server: "plugin-atlassian-atlassian"
+  slack_mcp_server: "user-slack"
+
+# Cross-cutting Slack channels searched for all focus areas
+slack_shared_channels:
+  - channel_id: "C09CXJX8B9B"
+    label: "#ml-product-leads"
+  - channel_id: "C092KAVP953"
+    label: "#ml-tech-leads"
+
+# Doc hub: https://www.notion.so/superbet/ML-Data-Product-Documentation-a18799b338434beabc04ec9447dbdc81
+# Shared database: collection://50d4dcf5-d36a-47f5-953e-df3cacb07639
+
+focus_areas:
+
+  engagement:
+    display_name: Engagement (Generosity)
+    slack_channel: "#comms-engagement"
+    prompt_context: |
+      Engagement owns activity-driven retention, generosity/bonus optimization, and churn
+      intervention via ML. North-star metrics: bonus ROI, player retention lift from ML
+      interventions, churn model precision/recall, campaign take-up rate.
+      Audience: VP+ leadership, CRM, Trading, and Data Science.
+      Prioritize: experiment results (churn model, bonus optimization), campaign launches,
+      pipeline/DE readiness, and any blocker on experiment timelines.
+    sources:
+      notion:
+        - page_id: "7397779c1f0941a59ad2904e903c66a9"
+          label: "Activity Bonus Model — Bi-Weekly Stakeholder Updates"
+          include_children: true
+        - page_id: "313032f852c58031a591fe99c5922366"
+          label: "Bonus Optimization Q2 Strategy"
+        - page_id: "327032f852c580a295b6cd53613c8c99"
+          label: "Large Scale Weekly Generosity Design"
+        - page_id: "328032f852c5803fbc15d2c5f5311cf7"
+          label: "Activity/Churn Model Working Group"
+      jira:
+        - project_key: "AM"
+          statuses: ["Done", "In Review", "In Progress"]
+      gdrive_search_terms:
+        - "generosity bonus optimization"
+        - "churn retention experiment"
+      slack_channels:
+        - channel_id: "C0AR3E53MDW"
+          label: "#tmp-br-generosity-experiment"
+        - channel_id: "C0AJTD0AAKD"
+          label: "#applied-ml-bonusing"
+        - channel_id: "C0AAC4BPR89"
+          label: "#tmp-generosity-measurement-discussion"
+
+  risk:
+    display_name: Risk
+    slack_channel: "#comms-risk"
+    prompt_context: |
+      Risk ML owns player risk segmentation models, fraud detection, and trader tooling.
+      North-star metrics: risk-free/core/bad classification accuracy, model precision/recall,
+      false-positive rate, trader override rate, and market-expansion readiness.
+      Audience: VP+ leadership, Risk Ops, Trading, Legal/Compliance.
+      Prioritize: model version releases (V1.1.0+), segmentation accuracy deltas, Brazil/Poland
+      market expansion, overlay/underlay mechanics, and trader feedback loops.
+    sources:
+      notion:
+        - page_id: "33b032f852c580da9ee7cce6e9267b7c"
+          label: "Risk Segmentation Model V1.1.0"
+          include_children: true
+        - page_id: "b223386b0b8c4a2b94c9e325277f364e"
+          label: "Metric Risk Segmentation Model"
+        - page_id: "33d032f852c5807b8672ff572e36e4e7"
+          label: "Risk Segmentation Model Under the Hood"
+        - page_id: "cb54aff2c15b413796ab5ee1d5defd7c"
+          label: "Risk ML — Ways of Working"
+      jira:
+        - project_key: "AM"
+          statuses: ["Done", "In Review", "In Progress"]
+        - project_key: "RA"
+          statuses: ["Done", "In Review", "In Progress"]
+      gdrive_search_terms:
+        - "risk segmentation model"
+        - "fraud detection underwriting"
+      slack_channels:
+        - channel_id: "C0AMK8A30T0"
+          label: "#risk-cross-blue"
+        - channel_id: "C0AN644L9S9"
+          label: "#risk-cross-blue-leads"
+        - channel_id: "C09EU7UK207"
+          label: "#unified-risk-segmentation-product-integration"
+        - channel_id: "C09D3L55KP1"
+          label: "#unified-risk-segmentation-stakeholders"
+        - channel_id: "C09JXH2LCD9"
+          label: "#unified-risk-segmentation-working-group"
+        - channel_id: "C0AEWEVGHJ6"
+          label: "#risk-workflow-auto"
+
+  ltv:
+    display_name: LTV
+    slack_channel: "#comms-ltv"
+    prompt_context: |
+      LTV owns predicted customer lifetime value (pCLTV), value-based bidding (VBB), and
+      marketing ML. North-star metrics: pCLTV accuracy (MAE/MAPE), VBB ROAS improvement,
+      LTV-to-actual ratio by cohort, and acquisition cost efficiency.
+      Audience: VP+ leadership, Growth/Acquisition, Martech, Finance, Data Science.
+      Prioritize: model accuracy improvements, VBB experiment results, new market LTV rollouts,
+      and bidding strategy shifts with measured impact.
+    sources:
+      notion:
+        - page_id: "20f032f852c5804ab69ed67838be1ab6"
+          label: "Predicted Customer Lifetime Value (pCLTV)"
+          include_children: true
+        - page_id: "20e032f852c5808c80a3e95a03a644cb"
+          label: "LTV Expected + Actualized V1"
+        - page_id: "281032f852c5801d9efec84ed7d56149"
+          label: "Future of Value Bidding & LTV Optimisation"
+        - page_id: "28d032f852c5802fbc42ef0b12b43228"
+          label: "LTV Documentation (from doc hub)"
+      jira:
+        - project_key: "AM"
+          statuses: ["Done", "In Review", "In Progress"]
+        - project_key: "MML"
+          statuses: ["Done", "In Review", "In Progress"]
+      gdrive_search_terms:
+        - "LTV lifetime value bidding"
+        - "pCLTV acquisition ROAS"
+      slack_channels:
+        - channel_id: "C09SLK0KP26"
+          label: "#ltv-ml-product"
+        - channel_id: "C09GQNJ1HUJ"
+          label: "#ltv-martech-ml-leads"
+        - channel_id: "C08FFFX1S4E"
+          label: "#ltv-model-brazil"
+        - channel_id: "C08R9RRRXP1"
+          label: "#ltv-internal-workgroup"
+
+  cs_ai:
+    display_name: CS AI
+    slack_channel: "#comms-cs-ai"
+    prompt_context: |
+      CS AI owns customer support automation — the AI agent sidebar, knowledge hub, and chatbot.
+      North-star metrics: ticket deflection rate, CSAT, first-response time, cost-per-resolution,
+      AI answer accuracy, and agent time-to-resolve.
+      Audience: VP+ leadership, CS Ops, Player Support, Eng leadership.
+      Prioritize: model accuracy / answer quality, deflection rate movement, new automation
+      workflows shipped (sidebar, knowledge hub), and quality regressions or escalation spikes.
+    sources:
+      notion:
+        - page_id: "1ebdb33904334971a0034c024f0a988b"
+          label: "CS AI Assist — Applied ML Proposal"
+          include_children: true
+        - page_id: "330032f852c58039b4cefc0142f3cacc"
+          label: "CS Agent Knowledge Hub + SideBar PRD"
+        - page_id: "329032f852c580fdae16d73814040d51"
+          label: "Player Support Strategy 2026"
+        - page_id: "33d032f852c580d5b62cfb9058284cf6"
+          label: "CS AI Planning (meeting notes)"
+      jira:
+        - project_key: "AM"
+          statuses: ["Done", "In Review", "In Progress"]
+        - project_key: "CS"
+          statuses: ["Done", "In Review", "In Progress"]
+      gdrive_search_terms:
+        - "customer support AI chatbot"
+        - "CS agent sidebar knowledge hub"
+      slack_channels:
+        - channel_id: "C0ANK6RU8MQ"
+          label: "#ml-customer-ops-agent"
+
+  gaming:
+    display_name: Gaming
+    slack_channel: "#comms-gaming"
+    prompt_context: |
+      Gaming ML owns RTP optimization, revenue share models, game recommendations, and
+      engagement ML for casino/sports. North-star metrics: ML-driven margin improvement,
+      recommendation click-through rate, game provider integration count, and revenue per session.
+      Audience: VP+ leadership, Gaming Product, Partnerships, Eng leadership.
+      Prioritize: margin model updates, new game integrations, recommendation system improvements,
+      XFN collaboration health (Gaming × ML), and revenue impact.
+    sources:
+      notion:
+        - page_id: "2ae032f852c5805ea423f97d0a361d14"
+          label: "Gaming ML Margin Product Summary"
+          include_children: true
+        - page_id: "ac778687c0fe43debf8af4d5f51ba250"
+          label: "Gaming × ML Collaboration Post-Mortem"
+        - page_id: "32c032f852c580f480edff32cab27ac0"
+          label: "Gaming Generosity"
+        - page_id: "341032f852c580d091d0d0b5929a4cda"
+          label: "Gaming ML Weekly (meeting notes)"
+      jira:
+        - project_key: "AM"
+          statuses: ["Done", "In Review", "In Progress"]
+        - project_key: "GAM"
+          statuses: ["Done", "In Review", "In Progress"]
+      gdrive_search_terms:
+        - "gaming ML RTP margin"
+        - "game recommendation revenue share"
+      slack_channels:
+        - channel_id: "C06G7RZR064"
+          label: "#ml-gaming-recsys"
+        - channel_id: "C0ACUQ2TK7T"
+          label: "#applied-ml-trading-and-gaming"
+        - channel_id: "C0AG8RQD71A"
+          label: "#tmp-gaming-ml-workshop"
