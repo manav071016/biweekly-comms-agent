@@ -90,7 +90,7 @@ focus_areas:
         - "fraud detection underwriting"
       slack_channels:
         - channel_id: "C0AMK8A30T0"
-          label: "#risk-cross-blue"
+          label: "#risk-cross-ml"
         - channel_id: "C0AN644L9S9"
           label: "#risk-cross-blue-leads"
         - channel_id: "C09EU7UK207"
@@ -140,6 +140,8 @@ focus_areas:
           label: "#ltv-model-brazil"
         - channel_id: "C08R9RRRXP1"
           label: "#ltv-internal-workgroup"
+        - channel_id: "C0BM75CHP08"
+          label: "#ltv-ml-internal"
 
   cs_ai:
     display_name: CS AI
@@ -172,7 +174,9 @@ focus_areas:
         - "CS agent sidebar knowledge hub"
       slack_channels:
         - channel_id: "C0ANK6RU8MQ"
-          label: "#ml-customer-ops-agent"
+          label: "#cs-ai-agent--ml-internal"
+        - channel_id: "C0AFLPEDBN1"
+          label: "#cs-ai-agent--general"
 
   gaming:
     display_name: Gaming
@@ -204,6 +208,7 @@ focus_areas:
         - "gaming ML RTP margin"
         - "game recommendation revenue share"
       slack_channels:
+        # TODO: add #gaming-rcmd--internal once its channel ID is known
         - channel_id: "C06G7RZR064"
           label: "#ml-gaming-recsys"
         - channel_id: "C0ACUQ2TK7T"
