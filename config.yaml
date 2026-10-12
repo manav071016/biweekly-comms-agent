@@ -4,9 +4,13 @@ global:
 
 mcp:
   atlassian_cloud_id: "axilis.atlassian.net"
-  notion_mcp_server: "plugin-Notion-notion"
-  atlassian_mcp_server: "plugin-atlassian-atlassian"
-  slack_mcp_server: "user-slack"
+  runtime: "claude-scheduled-tasks"
+  # Claude resolves Slack, Notion and Atlassian connectors by capability,
+  # not by Cursor server names.
+notion:
+  comms_log_page: "348032f852c58101bd6cd4851f96e653"
+  comms_log_data_source: "collection://831851a7-0f9e-42d8-82f7-546592374b3f"
+risk_free_source: "https://claude.ai/artifact/DdPJrYRKtt3fBSKFtw9TUn"
 
 # Cross-cutting Slack channels searched for all focus areas
 slack_shared_channels:
